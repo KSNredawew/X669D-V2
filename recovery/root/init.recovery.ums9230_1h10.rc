@@ -3,6 +3,20 @@ import /init.recovery.common.rc
 
 # Modules
 on early-init
+    # Core dependencies
+    insmod /vendor/lib/modules/kfifo_buf.ko
+    insmod /vendor/lib/modules/sensorhub.ko
+    insmod /vendor/lib/modules/tran_gesture.ko
+
+    insmod /vendor/lib/modules/unisoc-iommu.ko
+    insmod /vendor/lib/modules/sprd-gsp.ko
+    insmod /vendor/lib/modules/apsys-dvfs.ko
+    insmod /vendor/lib/modules/tran_hwinfo.ko
+    insmod /vendor/lib/modules/transsion_bias_voltage.ko
+    insmod /vendor/lib/modules/sprd-drm.ko
+
+    # Touchscreen and fingerprint modules
     insmod /vendor/lib/modules/adaptive-ts.ko
     insmod /vendor/lib/modules/focaltech_ft8756_spi_ts.ko
     insmod /vendor/lib/modules/goodix_fp.ko
+
